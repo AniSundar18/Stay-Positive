@@ -252,6 +252,54 @@
   </div>
 </div>
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">A Simple Fix</h2>
+    
+        <!-- Assumptions Section -->
+        <div class="content has-text-justified mb-5">
+        <p>
+          To address the issue, we make three key assumptions:
+        </p>
+        <ul>
+          <li><strong>Assumption 1:</strong> Class 0 denotes the real distribution, and Class 1 denotes the distribution of AI-generated images.</li>
+          <li><strong>Assumption 2:</strong> The score output by the network passes through the sigmoid activation before the decision.</li>
+          <li><strong>Assumption 3:</strong> The feature vector extracted by the neural network before applying the linear classification layer is passed through the ReLU activation.</li>
+        </ul>
+  
+        <p>
+          These three assumptions can be easily satisfied by popular modern networks, including ResNet-50. These networks are commonly used for binary classification tasks and already incorporate such mechanisms in their design.
+        </p>
+      </div>
+    
+        <!-- Diagram/Image -->
+        <div class="mb-5">
+          <figure class="image">
+            <img src="static/images/teaser.png" alt="Our Algorithm Diagram" />
+          </figure>
+        </div>
+    
+        <!-- Algorithm Explanation -->
+        <div class="content has-text-justified">
+          <p>
+              The first assumption we make is about the class labels: class 0 for real images and class 1 for fake images. This is a typical setup for binary classification. Next, we use a monotonically-increasing sigmoid activation function (Assumption-2), which means the detector will give higher scores to AI-generated images compared to real ones. 
+          </p>
+          
+          <p>
+              In addition, according to Assumption-3, the input to the linear classifier is a vector with strictly non-negative values. Each dimension of this vector represents a specific feature or pattern that influences the decision the neural network makes.
+          </p>
+          
+          <p>
+              The network assigns a weight to each feature. If the weight is positive, the presence of that feature will increase the score, making it more likely that the image will be classified as fake. Conversely, if the weight is negative, the image is more likely to be classified as real.
+          </p>
+          
+          <p>
+              The key insight here is that finding certain features should never increase the likelihood of an image being real. To address this, we retrain only the final classification layer, keeping the rest of the network frozen. We also ensure that the weights "stay-positive" to prevent features that signal fakeness from being wrongly associated with real images.
+          </p>
+        </div>
+      </div>
+    </div>
+
     
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
