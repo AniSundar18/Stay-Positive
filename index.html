@@ -225,34 +225,32 @@
     </div>
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Key Insight</h2>
-      <div class="columns is-vcentered">
-        
-        <!-- Diagram/Image Placeholder -->
-        <div class="column is-half">
-          <figure class="image is-4by3">
-            <img src="static/images/insight.png" alt="Key Insight Diagram" />
-          </figure>
-        </div>
-        
-        <!-- Textual Explanation -->
-        <div class="column is-half has-text-justified">
-          <p>
-          <strong>Consider this toy example.</strong> We have three images: a real one on the left, an LDM-generated one in the middle, and a FLUX-generated one on the right. During training, we're only exposed to the first two — real and LDM-generated. So it seems reasonable to assume that <em>real images tend to have clean, readable text</em>, and the generated ones don’t.
-        </p>
-        
-        <p>
-          But at test time, we introduce FLUX — which is <em>also a latent diffusion model</em>, just a more advanced one. And now, the generated images start to look a lot more like the real ones, especially in how they render text.
-        </p>
-        
-        <p>
-          That earlier assumption — that <em>good text means the image is real</em> — breaks down. What we found is that relying on that assumption can actually hurt the detector’s performance. It can get confused, even when there are still <em>other clear signs that the image was generated</em>.
-        </p>
-        </div>
-      </div>
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Key Insight</h2>
+
+    <!-- Diagram/Image at the top -->
+    <div class="mb-5">
+      <figure class="image is-4by3">
+        <img src="static/images/insight.png" alt="Key Insight Diagram" />
+      </figure>
+    </div>
+
+    <!-- Textual Explanation -->
+    <div class="content has-text-justified">
+      <p>
+        <strong>Consider this toy example.</strong> We have three images: a real one on the left, an LDM-generated one in the middle, and a FLUX-generated one on the right. During training, we're only exposed to the first two — real and LDM-generated. So it seems reasonable to assume that <em>real images tend to have clean, readable text</em>, and the generated ones don’t.
+      </p>
+
+      <p>
+        But at test time, we introduce FLUX, which is <em>also a latent diffusion model</em>, just a more advanced one. And now, the generated images start to look a lot more like the real ones, especially in how they render text.
+      </p>
+
+      <p>
+        That earlier assumption — that <em>good text means the image is real</em> — breaks down. What we found is that relying on that assumption can actually hurt the detector’s performance. It can get confused, even when there are still <em>other clear signs that the image was generated</em>.
+      </p>
     </div>
   </div>
+</div>
 
     
     <!-- Paper video. -->
