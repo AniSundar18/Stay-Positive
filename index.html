@@ -266,22 +266,27 @@
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Detecting Partially-Inpainted Images</h2>
-        <div class="columns is-centered">
-          <div class="mb-5">
-            <figure class="image">
-              <img src="static/images/inp.png" alt="Our Algorithm Diagram" />
-            </figure>
-          </div>
-          <div class="column content">
-            <p>
-              The figure shows an image of a painting (human created), which has been partially modified by Stable Diffusion in various regions. Existing detectors often struggle with images where only a small region has been generated, while the rest remains real. This is understandable—since most of the image is authentic, it can dominate the detector’s decision. In contrast, our method remains effective even in these challenging cases, successfully identifying such partially generated images.
-            </p>
-          </div>
+      <div class="column is-full">
+  <h2 class="title is-3 has-text-centered">Detecting Partially-Inpainted Images</h2>
 
-        </div>
-      </div>
+  <!-- Image centered -->
+    <div class="has-text-centered mb-4">
+      <figure class="image is-inline-block">
+        <img src="static/images/inp.png" alt="Our Algorithm Diagram" />
+      </figure>
+    </div>
+  
+    <!-- Text content below image -->
+    <div class="content has-text-justified">
+      <p>
+        The figure shows an image of a painting (human-created), which has been partially modified by Stable Diffusion in various regions.
+        Existing detectors often struggle with images where only a small region has been generated, while the rest remains real. 
+        This is understandable—since most of the image is authentic, it can dominate the detector’s decision.
+        In contrast, our method remains effective even in these challenging cases, successfully identifying such partially generated images.
+      </p>
+    </div>
+  </div>
+
     </div>
     <!--/ Matting. -->
 
