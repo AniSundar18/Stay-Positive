@@ -294,7 +294,7 @@
           </p>
           
           <p>
-              The key insight here is that finding certain features should never increase the likelihood of an image being real. To address this, we retrain only the final classification layer, keeping the rest of the network frozen. We also ensure that the weights "stay-positive" to prevent features that signal fakeness from being wrongly associated with real images.
+              The key insight here is that finding certain features should never increase the likelihood of an image being real. To address this, we retrain only the final classification layer, keeping the rest of the network frozen. We ensure that the weights "stay-positive" to stop patterns associated with real images from influencing the decision.
           </p>
         </div>
       </div>
