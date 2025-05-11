@@ -269,14 +269,15 @@
       <div class="column">
         <h2 class="title is-3">Detecting Partially-Inpainted Images</h2>
         <div class="columns is-centered">
+          <div class="mb-5">
+            <figure class="image">
+              <img src="static/images/inp.png" alt="Our Algorithm Diagram" />
+            </figure>
+          </div>
           <div class="column content">
             <p>
-              Existing detectors often struggle with images where only a small region has been generated, while the rest remains real. This is understandable—since most of the image is authentic, it can dominate the detector’s decision. In contrast, our method remains effective even in these challenging cases, successfully identifying such partially generated images.
+              The figure shows an image of a painting (human created), which has been partially modified by Stable Diffusion in various regions. Existing detectors often struggle with images where only a small region has been generated, while the rest remains real. This is understandable—since most of the image is authentic, it can dominate the detector’s decision. In contrast, our method remains effective even in these challenging cases, successfully identifying such partially generated images.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
           </div>
 
         </div>
