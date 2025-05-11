@@ -228,7 +228,7 @@
 
     
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+<!--     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -238,7 +238,8 @@
       </div>
     </div>
     <!--/ Paper video. -->
-  </div>
+  <!--</div> -->
+  
 </section>
 
 
@@ -250,15 +251,16 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Improved Generalization to other Generators</h2>
+          <div class="mb-5">
+            <figure class="image">
+              <img src="static/images/teaser.png" alt="Our Algorithm Diagram" />
+            </figure>
+          </div>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            We observe that existing detectors underperform on images coming from different generators since they rely on spurious real features (Section 3.2). Our algorithm vastly improves the performance of 
+            the detector.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
